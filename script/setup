@@ -7,7 +7,7 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-script/bootstrap
+script/install-dependencies
 
 echo "===> Setting up DB..."
 # reset database to a fresh state.

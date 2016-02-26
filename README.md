@@ -10,10 +10,10 @@ particular examples are for a simple Ruby on Rails application.
 If your scripts are normalized by name across all of your projects, your
 contributors only need to know the pattern, not a deep knowledge of the
 application. This means they can jump into a project and make contributions
-without first learning how to bootstrap the project or how to get its tests to
+without first learning how to install-dependencies the project or how to get its tests to
 run.
 
-The intricacies of things like test commands and bootstrapping can be managed by
+The intricacies of things like test commands and install-dependenciesping can be managed by
 maintainers, who have a rich understanding of the project's domain. Individual
 contributors need only to know the patterns and can simply run the commands and
 get what they expect.
@@ -30,9 +30,9 @@ contributions.
 
 The following is a list of scripts and their primary responsibilities.
 
-### script/bootstrap
+### script/install-dependencies
 
-[`script/bootstrap`][bootstrap] is used solely for fulfilling dependencies of the project.
+[`script/install-dependencies`][install-dependencies] is used solely for fulfilling dependencies of the project.
 
 This can mean RubyGems, npm packages, Homebrew packages, Ruby versions, Git submodules, etc.
 
@@ -44,7 +44,7 @@ The goal is to make sure all required dependencies are installed.
 This is typically run after an initial clone, or, to reset the project back to
 its initial state.
 
-This is also useful for ensuring that your bootstrapping actually works well.
+This is also useful for ensuring that your install-dependenciesping actually works well.
 
 ### script/update
 
@@ -53,7 +53,7 @@ This is also useful for ensuring that your bootstrapping actually works well.
 If you have not worked on the project for a while, running [`script/update`][update] after
 a pull will ensure that everything inside the project is up to date and ready to work.
 
-Typically, [`script/bootstrap`][bootstrap] is run inside this script. This is also a good
+Typically, [`script/install-dependencies`][install-dependencies] is run inside this script. This is also a good
 opportunity to run database migrations or any other things required to get the
 state of the app into shape for the current version that is checked out.
 
@@ -101,7 +101,7 @@ name, so you can connect to that environment's console.
 You should configure and run anything that needs to happen to open a console for
 the requested environment.
 
-[bootstrap]: script/bootstrap
+[install-dependencies]: script/install-dependencies
 [setup]: script/setup
 [update]: script/update
 [server]: script/server

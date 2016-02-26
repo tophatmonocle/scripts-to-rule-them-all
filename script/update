@@ -6,7 +6,7 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-script/bootstrap
+script/install-dependencies
 
 echo "==> Updating db..."
 # run all database migrations to ensure everything is up to date.
